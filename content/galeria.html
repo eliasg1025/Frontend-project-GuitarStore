@@ -2,13 +2,19 @@
 <html lang="es">
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-        <link href="https://file.myfontastic.com/nfJibBw4pNG9j43UqjfWNU/icons.css" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=3.0, minimum-scale=1.0">
+        <!-- <link href="https://file.myfontastic.com/nfJibBw4pNG9j43UqjfWNU/icons.css" rel="stylesheet"> -->
         <link rel="stylesheet" href="css/styles.css">
-        <title>GuitarStore</title>
+        <link rel="stylesheet" href="css/galeria.css">
+        <title>Galeria | GuitarStore</title>
     </head>
     <body>
-
+        <div class="modal" id="modal">
+            <div class="modal__content">
+                <img src="" alt="" class="modal__img" id="modal__img">
+            </div>
+            <div class="modal__boton" id="modal__boton">X</div>
+        </div>
         <header class="main-header">
             <div class="container container--flex">
                 <div class="logo-container column column--50">
@@ -27,13 +33,11 @@
 
         <nav class="main-nav">
             <div class="container container--flex">
-
-                <!----------------Icon MENU---------------->
                 <span class="icon-menu" id="btnmenu"></span>
                 <ul class="menu" id="menu">
-                    <li class="menu__item"><a href="index.html" class="menu__link menu__link--select">Inicio</a></li>
+                    <li class="menu__item"><a href="index.html" class="menu__link ">Inicio</a></li>
                     <li class="menu__item"><a href="nosotros.html" class="menu__link">Nosotros</a></li>
-                    <li class="menu__item"><a href="galeria.html" class="menu__link">Galeria</a></li>
+                    <li class="menu__item"><a href="galeria.html" class="menu__link menu__link--select">Galeria</a></li>
                     <li class="menu__item"><a href="contacto.html" class="menu__link">Contacto</a></li>
                 </ul>
                 <div class="social-icon">
@@ -45,56 +49,34 @@
         </nav>
 
         <section class="banner">
-            <img src="img/banner.jpeg" alt="" class="banner__img">
+            <img src="img/gallery/banner-gallery.jpeg" alt="" class="banner__img">
             <div class="banner__content">Lorem ipsum dolor sit amet</div>
         </section>
 
         <main class="main">
-            <section class="group group--color">
-                <div class="container">
-                    <h2 class="main__title">Bienvenido a nuestra store</h2>
-                    <p class="main__txt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, nam, fugit. Molestias iusto officia nostrum beatae autem quia, temporibus vitae aspernatur adipisci neque vero facilis, officiis fugit quam ducimus recusandae.</p>
-                </div>
-            </section>
-
-            <section class="group main__about__descirption">
-                <div class="container container--flex">
-                    <div class="column column--50">
-                        <img src="img/ourstore.jpeg" alt="">
-                    </div>
-                    <div class="column column--50">
-                        <h3 class="column__title">Lorem ipsum dolor sit amet</h3>
-                        <p class="column__txt">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
-                        <a href="" class="btn btn--contact">Contact</a>
-                    </div>
-                </div>
-            </section>
-
-            <section class="group best-models">
-                <h2 class="group__title">Nuestros mejores modelos</h2>
+            <div class="group gallery">
+                <h2 class="group__title">Nuestra Galeria</h2>
                 <div class="container container--flex">
                     <div class="column column--50-25">
-                        <img src="img/guitar1.jpeg" alt="" class="best-models__img">
-                        <div class="best-models__title">Modelo 1</div>
-                        <div class="best-models__price">$99</div>
+                        <img src="img/gallery/gallery1.jpeg" alt="" class="gallery__img gallery__img--big">
+                        <img src="img/gallery/gallery2.jpeg" alt="" class="gallery__img gallery__img--small">
                     </div>
                     <div class="column column--50-25">
-                        <img src="img/guitar2.jpeg" alt="" class="best-models__img">
-                        <div class="best-models__title">Modelo 2</div>
-                        <div class="best-models__price">$99</div>
+                        <img src="img/gallery/gallery3.jpeg" alt="" class="gallery__img gallery__img--small">
+                        <img src="img/gallery/gallery4.jpeg" alt="" class="gallery__img gallery__img--big">
                     </div>
                     <div class="column column--50-25">
-                        <img src="img/guitar3.jpeg" alt="" class="best-models__img">
-                        <div class="best-models__title">Modelo 3</div>
-                        <div class="best-models__price">$99</div>
+                        <img src="img/gallery/gallery5.jpeg" alt="" class="gallery__img gallery__img--big">
+                        <img src="img/gallery/gallery6.jpeg" alt="" class="gallery__img gallery__img--small">
                     </div>
                     <div class="column column--50-25">
-                        <img src="img/guitar4.jpeg" alt="" class="best-models__img">
-                        <div class="best-models__title">Modelo 4</div>
-                        <div class="best-models__price">$99</div>
+                        <img src="img/gallery/gallery7.jpeg" alt="" class="gallery__img gallery__img--small">
+                        <img src="img/gallery/gallery8.jpeg" alt="" class="gallery__img gallery__img--big">
                     </div>
-                </div>
-            </section>
+                </div> 
+            </div>
+
+            
         </main>
 
         <footer class="main-footer">
@@ -119,7 +101,7 @@
             </div>
         </footer>
         <script type="text/javascript" src="js/menu.js">
-
         </script>
+        <script type="text/javascript" src="js/modal.js"></script>
     </body>
 </html>
