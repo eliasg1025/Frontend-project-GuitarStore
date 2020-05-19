@@ -29,14 +29,21 @@
           <a href="" class="icon-youtube">Visita nuestro canal</a>
         </p>
       </div>
-      <p class="copy">© GuitarStore | Desarrollado por Elias Guere</p>
+      <p class="copy">
+        &copy; {{ year }} GuitarStore | Desarrollado por Elias Guere
+      </p>
     </div>
   </footer>
 </template>
 
 <script>
   export default {
-    name: 'Footer'
+    name: 'Footer',
+    computed: {
+      year() {
+        return new Date().getFullYear();
+      }
+    }
   };
 </script>
 

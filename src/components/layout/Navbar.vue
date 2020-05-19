@@ -2,8 +2,8 @@
   <nav class="main-nav">
     <div class="container container--flex">
       <!----------------Icon MENU---------------->
-      <span class="icon-menu" id="btnmenu"></span>
-      <ul class="menu" id="menu">
+      <span class="icon-menu" id="btnmenu" @click="toggleMenu"></span>
+      <ul class="menu" id="menu" :class="{ mostrar: viewMenu }">
         <li class="menu__item">
           <router-link to="/" class="menu__link">Inicio</router-link>
         </li>
@@ -32,7 +32,17 @@
 
 <script>
   export default {
-    name: 'Navbar'
+    name: 'Navbar',
+    data() {
+      return {
+        viewMenu: false
+      };
+    },
+    methods: {
+      toggleMenu() {
+        this.viewMenu = !this.viewMenu;
+      }
+    }
   };
 </script>
 
