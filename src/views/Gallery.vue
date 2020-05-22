@@ -3,7 +3,9 @@
     bannerImgName="gallery/banner-gallery"
     bannerText="Lorem ipsum dolor sit amet"
   >
-    <Modal />
+    <Modal ref="modal">
+      <img :src="modalImg" alt="" class="modal__img" id="modal__img" />
+    </Modal>
 
     <main class="main">
       <div class="group gallery">
@@ -11,11 +13,13 @@
         <div class="container container--flex">
           <div class="column column--50-25">
             <img
+              @click="openModal"
               src="@/assets/img/gallery/gallery1.jpeg"
               alt=""
               class="gallery__img gallery__img--big"
             />
             <img
+              @click="openModal"
               src="@/assets/img/gallery/gallery2.jpeg"
               alt=""
               class="gallery__img gallery__img--small"
@@ -23,11 +27,13 @@
           </div>
           <div class="column column--50-25">
             <img
+              @click="openModal"
               src="@/assets/img/gallery/gallery3.jpeg"
               alt=""
               class="gallery__img gallery__img--small"
             />
             <img
+              @click="openModal"
               src="@/assets/img/gallery/gallery4.jpeg"
               alt=""
               class="gallery__img gallery__img--big"
@@ -35,11 +41,13 @@
           </div>
           <div class="column column--50-25">
             <img
+              @click="openModal"
               src="@/assets/img/gallery/gallery5.jpeg"
               alt=""
               class="gallery__img gallery__img--big"
             />
             <img
+              @click="openModal"
               src="@/assets/img/gallery/gallery6.jpeg"
               alt=""
               class="gallery__img gallery__img--small"
@@ -47,11 +55,13 @@
           </div>
           <div class="column column--50-25">
             <img
+              @click="openModal"
               src="@/assets/img/gallery/gallery7.jpeg"
               alt=""
               class="gallery__img gallery__img--small"
             />
             <img
+              @click="openModal"
               src="@/assets/img/gallery/gallery8.jpeg"
               alt=""
               class="gallery__img gallery__img--big"
@@ -72,6 +82,17 @@
     components: {
       Layout,
       Modal
+    },
+    data() {
+      return {
+        modalImg: ''
+      };
+    },
+    methods: {
+      openModal(evt) {
+        this.modalImg = evt.toElement.src;
+        this.$refs.modal.openModal();
+      }
     }
   };
 </script>
@@ -91,5 +112,8 @@
   }
   .gallery__img--small {
     height: 200px;
+  }
+  .modal__img {
+    width: 70%;
   }
 </style>

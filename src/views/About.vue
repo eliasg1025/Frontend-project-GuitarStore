@@ -1,15 +1,12 @@
 <template>
   <Layout bannerImgName="nosotros1" bannerText="Lorem ipsum dolor sit amet">
     <main class="main">
-      <section class="group group--color">
-        <div class="container">
-          <h2 class="main__title">Acerca de nosotros</h2>
-          <p class="main__txt">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus,
-            nam, fugit. Molestias iusto officia nostrum beatae autem quia.
-          </p>
-        </div>
-      </section>
+
+      <GroupText
+        title="Acerca de nosotros"
+        text="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus,
+            nam, fugit. Molestias iusto officia nostrum beatae autem quia."
+      />
 
       <section class="group our-team">
         <h2 class="group__title">Nuestro equipo</h2>
@@ -64,10 +61,12 @@
 
 <script>
   import Layout from '@/components/layout/Layout.vue';
+  import GroupText from '../components/shared/GroupText';
 
   export default {
     name: 'About',
     components: {
+      GroupText,
       Layout
     }
   };

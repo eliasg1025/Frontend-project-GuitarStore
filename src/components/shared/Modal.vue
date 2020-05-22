@@ -1,7 +1,7 @@
 <template>
   <div class="modal" id="modal" :class="{ 'modal--open': view }">
     <div class="modal__content">
-      <img src="" alt="" class="modal__img" id="modal__img" />
+      <slot />
     </div>
     <div class="modal__boton" id="modal__boton" @click="closeModal">X</div>
   </div>
@@ -12,10 +12,13 @@
     name: 'Modal',
     data() {
       return {
-        view: true
+        view: false
       };
     },
     methods: {
+      openModal() {
+        this.view = true;
+      },
       closeModal() {
         this.view = false;
       }
@@ -39,9 +42,6 @@
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-  }
-  .modal__img {
-    width: 70%;
   }
   .modal__boton {
     position: absolute;
